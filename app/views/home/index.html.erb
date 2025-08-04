@@ -1,0 +1,49 @@
+<header class = "sticky top-0">
+    <nav class="flex items-center justify-between">
+        <span class= "text-4xl font-bold">XBANK</span>
+            <div class="flex gap-x-4">
+                <%= link_to "Login", new_user_session_path, class: "text-2xl font-semibold"%>
+                <%= link_to "Registro", new_user_registration_path,class: "text-2xl font-semibold"%>
+                <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } ,class: "text-2xl font-semibold"%>
+            </div>
+    </nav>
+</header>
+
+  <!-- Div responsavel por dividir a tela em duas colunas-->
+ 
+    <main class="text-white bg-gradient-to-r from-black to-primary">
+        <section class=" min-h-screen grid grid-cols-1 lg:grid-cols-2 ">
+           <!-- Div responsavel pelo texto-->
+            <div class="flex min-h-screen px-12 flex-col justify-center items-center text-center">
+                <h1 class="text-4xl font-bold leading-tight mb-6">SEJA BEM VINDO AO
+                    <br>XBANK, O BANCO <br>
+                    TOTALMENTE INSPIRADO <br>
+                    EM DANIEL DO X
+                </h1>
+        
+                <p class="text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam corporis numquam rem. Voluptatibus consectetur porro rem officia veniam, repellendus ipsum? Odit odio animi aspernatur quod velit rem facere voluptatum id! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio libero enim, unde exercitationem quisquam quia magni, consequuntur quasi, ipsam fugit fugiat laboriosam eius quis assumenda? Iusto consectetur soluta tempore provident?</p>
+            </div>
+        
+          <!-- Div responsavel pela logo-->
+            <div class="hidden lg:flex justify-center items-center">
+        
+                <div class="flex justify-center items-center rounded-full h-[460] w-[460] bg-black">
+                    <span class="text-[100px] font-extrabold">XBANK </span>
+                </div>
+            </div>
+        
+        </section>
+
+        <!--Div responsavel pelos cartões-->
+        <section class="grid grid-cols-1  lg:grid-cols-2 min-h-screen">
+            <div class="flex min-h-screen px-12 flex-col  items-center text-center">
+                <h1 class="text-4xl font-bold leading-tight mb-6">CARTÕES XBANK</h1>
+                <p>Crédito, débito ou múltiplo — o cartão ideal para cada momento. Com os cartões do XBANK, você tem segurança, controle total pelo app e benefícios exclusivos, como cashback, programa de pontos e descontos em parceiros.</p>
+                <%= link_to "Obter Cartão", new_user_registration_path , class: "btn p-5 m-50  text-[25px]" %>
+            </div>
+
+            <div class="flex justify-center">
+                <%= image_tag "cartao.png", alt: "Cartao", class: "w-[600px] h-[600px]"%>
+            </div>
+        </section>
+    </main>

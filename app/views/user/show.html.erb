@@ -1,0 +1,21 @@
+<header class= "flex items-center flex-row bg-black">
+  <div class="avatar rounded-full bg-white w-30 h-30 ml-10">
+  </div>
+  <h1 class="pl-10 font-bold text-4xl">Bem vindo,<%= current_user.nome%></h1>
+</header>
+
+<main class="flex items-center justify-center  bg-white h-[calc(100vh-9rem)] overflow-hidden">
+  <div class="flex gap-4">
+    <%=link_to user_conta_path (current_user) do%>
+    <div class="flex justify-center btn items-center h-40 w-40 bg-gradient-to-r from-black to-primary hover:scale-105  
+    transition duration-500 ease-in-out">Contas</div>
+    <%end%>
+    
+    <div class="flex justify-center btn items-center h-40 w-40 bg-gradient-to-r from-black to-primary hover:scale-105  
+    transition duration-500 ease-in-out">Fale com suporte </div>
+    <div class="flex justify-center btn items-center h-40 w-40 bg-gradient-to-r from-black to-primary hover:scale-105  
+    transition duration-500 ease-in-out">Configurações</div>
+    <div class="flex justify-center btn items-center h-40 w-40 bg-gradient-to-r from-black to-primary hover:scale-105  
+    transition duration-500 ease-in-out">Estatisticas Gerais</div>
+  </div>
+</main>

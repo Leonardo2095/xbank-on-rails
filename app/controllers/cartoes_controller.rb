@@ -1,0 +1,2 @@
+class CartoesController < ApplicationController
+end
