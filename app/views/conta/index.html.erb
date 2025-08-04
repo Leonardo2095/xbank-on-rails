@@ -1,26 +1,21 @@
 <main class="bg-gradient-to-r from-black to-primary min-h-screen">
-  <div class="flex flex-cols justify-center items-center min-h-screen">
-    <div class="border-4 rounded-xl p-10 bg-white/10 backdrop-blur-sm h-[400px] w-[250px]">
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="flex flex-col items-center border-4 rounded-xl p-10 bg-white  h-[400px] w-[300px]">
       <p style="color: green"><%= notice %></p>
       
       <% content_for :title, "Contas" %>
       
-      <h1>Conta</h1>
+      <h1 class= "text-black font-bold">CONTAS</h1>
       
-      <div id="conta">
-      
-      
+      <div class= "flex flex-col  mb-10 mt-5 bg-white/10 backdrop-blur-sm h-[200px] overflow-y-auto">
         <%@contas.each do |contum| %>
-          <%= render contum %>
-          <p>
-            <%= link_to "Show this contum", contum %>
-          </p>
-      
-      
+          <%=link_to new_contum_path(contum), class: "block rounded-full mb-4 pl-15 pr-15 pb-2 pt-2 bg-gradient-to-r from-black to-primary text-center" do%>
+          <%=contum.nome%>
+          <%end%>
         <% end %>
       </div>
       
-      <%= link_to "New contum", new_contum_path %>
+      <%= link_to "Criar nova conta", new_contum_path, class: "mt-auto text-black"%>
     </div>
   </div>
 </main>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_03_143140) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_04_122246) do
   create_table "conta", force: :cascade do |t|
     t.decimal "saldo", default: "0.0"
     t.datetime "created_at", null: false
@@ -18,7 +18,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_03_143140) do
     t.integer "user_id"
     t.string "nome"
     t.string "password"
-    t.index ["password"], name: "index_conta_on_password", unique: true
     t.index ["user_id"], name: "index_conta_on_user_id"
   end
 
