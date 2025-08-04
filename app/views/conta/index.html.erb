@@ -9,7 +9,7 @@
       
       <div class= "flex flex-col  mb-10 mt-5 bg-white/10 backdrop-blur-sm h-[200px] overflow-y-auto">
         <%@contas.each do |contum| %>
-          <%=link_to new_contum_path(contum), class: "block rounded-full mb-4 pl-15 pr-15 pb-2 pt-2 bg-gradient-to-r from-black to-primary text-center" do%>
+          <%=link_to contum_path(contum), class: "block rounded-full mb-4 pl-15 pr-15 pb-2 pt-2 bg-gradient-to-r from-black to-primary text-center" do%>
           <%=contum.nome%>
           <%end%>
         <% end %>

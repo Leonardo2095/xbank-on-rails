@@ -1,5 +1,5 @@
 class ContaController < ApplicationController
-  before_action :set_contum, only: %i[ show edit update destroy sacar depositar ]
+  before_action :set_contum, only: %i[ show edit update destroy sacar depositar]
 
   before_action :authenticate_user!
 
@@ -60,7 +60,6 @@ class ContaController < ApplicationController
   end
 
   def sacar
-    @contum
     if request.post?
       valor = params[:valor]
       if @contum.sacar(valor)
@@ -97,7 +96,5 @@ class ContaController < ApplicationController
     def contum_params
       params.expect(contum: [:saldo, :password, :nome])
     end
-
-
   
 end

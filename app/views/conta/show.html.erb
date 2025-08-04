@@ -1,10 +1,15 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @contum %>
-
-<div>
-  <%= link_to "Edit this contum", edit_contum_path(@contum) %> |
-  <%= link_to "Back to conta", conta_path %>
-
-  <%= button_to "Destroy this contum", @contum, method: :delete %>
+<div class="flex flex-col h-screen">
+  <p style="color: green"><%= notice %></p>
+  <%= render 'header' %>
+  <main class="flex justify-center items-center gap-4 flex-grow bg-gradient-to-r from-black to-primary">
+    
+    <%= link_to sacar_contum_path(@contum) do%>
+      <div class="bg-white h-40 w-40 text-black font-bold flex items-center justify-center">SACAR</div>
+    <%end%>
+    <%= link_to depositar_contum_path(@contum) do %>
+      <div class="bg-white h-40 w-40 text-black font-bold flex items-center justify-center">DEPOSITAR</div>
+    <%end%>
+      <div class="bg-white h-40 w-40 text-black font-bold flex items-center justify-center">TRANSFERIR</div>
+      <div class="bg-white h-40 w-40 text-black font-bold flex items-center justify-center">HISTÓRICO</div>
+  </main>
 </div>

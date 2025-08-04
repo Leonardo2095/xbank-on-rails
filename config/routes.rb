@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
       get "depositar", to: "conta#depositar", as: :depositar      
       post "depositar", to: "conta#depositar"
+
+      
     end
   end
 
