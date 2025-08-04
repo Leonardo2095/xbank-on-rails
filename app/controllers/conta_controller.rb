@@ -23,7 +23,7 @@ class ContaController < ApplicationController
 
   # POST /conta or /conta.json
   def create
-    @contum = Contum.new(contum_params)
+    @contum = current_user.conta.build(contum_params)
 
     respond_to do |format|
       if @contum.save
@@ -95,7 +95,7 @@ class ContaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contum_params
-      params.expect(contum: [ :saldo ])
+      params.expect(contum: [:saldo, :password, :nome])
     end
 
 
